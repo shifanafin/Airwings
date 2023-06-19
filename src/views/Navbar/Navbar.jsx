@@ -5,6 +5,7 @@ import { TiThMenuOutline } from "react-icons/ti";
 import { AiOutlineClose } from "react-icons/ai";
 import NavMobile from "./NavMobile";
 import { AnchorLink } from "react-anchor-link-smooth-scroll";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isactive, setIsActive] = useState(false);
@@ -27,29 +28,30 @@ const Navbar = () => {
       <div
         className={`${
           isactive
-            ? "bg-blue-main text-white h-20 shadow-lg "
+            ? "bg-blue-main text-white h-15 shadow-lg  "
             : " bg-white text-blue-main  "
         } fixed top-0 z-30 w-full py-6 mx-auto
       transition-all duration-100 `}
       >
         <div className="flex justify-between items-center pl-6">
-          <a 
-          href="/">
+          <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} 
+          >
             <img src="" alt="Logo " />
-          </a>
+          </Link>
           {/* on Desktop */}
           <div className="hidden sm:flex gap-5 font-semibold mr-6">
             <ul className="flex flex-row items-center justify-center mx-auto gap-8  ">
               {items.map((item, index) => {
                 return (
                   <li key={index}>
-                    <a
-                      href={item.href}
-                      className="hover:text-yellow-hover transition duration-500"
+
+                    <Link activeClass="text-yellow-main" to={item.href} spy={true} smooth={true} offset={50} duration={500} 
+                     
+                      className="hover:text-yellow-hover transition duration-500 cursor-pointer"
                     >
                       
                       {item.name}
-                    </a>
+                    </Link>
                     
                   </li>
                 );

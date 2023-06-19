@@ -4,11 +4,11 @@ import hero from "./assets/hero.jpg";
 
 export const navData = {
     items :[ 
-        {href:"/#",name:"Home"},
-        {href:"/#about",name:"About"},
-      {  href:"/#service",name:"Services"},
-       { href:"/#packages",name:"Special Packages"},
-       { href:"/#contact",name:"Contact"}
+        {href:"home",name:"Home"},
+        {href:"about",name:"About"},
+      {  href:"service",name:"Services"},
+       { href:"packages",name:"Special Packages"},
+       { href:"contact",name:"Contact"}
     ]
 }
 
