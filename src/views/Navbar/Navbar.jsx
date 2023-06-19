@@ -76,7 +76,7 @@ const Navbar = () => {
             } sm:hidden fixed bg-blue-main w-4/6 right-3 h-full  -z-10 transition-all duration-300 bottom-0 rounded-2xl top-5 overflow-hidden 
     flex items-center justify-center `}
           >
-            <NavMobile />
+            <NavMobile toggle={toggle} setToggle={setToggle} />
           </div>
         </div>
       </div>
