@@ -4,8 +4,9 @@ import { Link } from 'react-scroll'
 
 const NavMobile = ({ toggle, setToggle }) => {
   return (
-    <div> 
-      <ul className='flex flex-col gap-8 text-white text-2xl  mb-32'>
+    <div > 
+      
+      <ul className='flex flex-col gap-8 text-white text-2xl  mb-32 z-100'>
         {navData.items.map((item, index) => {
           return (
             <li key={index} className='flex items-center gap-4 cursor-pointer'>

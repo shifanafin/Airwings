@@ -26,9 +26,9 @@ const Services = () => {
  
 
   return (
-    <div id="service">
-      &nbsp;
-      <div className="py-32">
+    <div  className="sm:h-full sm:w-full">
+   
+      <div id="service" className="pt-28 xs:pt-32">
         <div className="mx-auto w-5/6 ">
           <div>
             <h1 className="text-4xl font-bold text-blue-main   ">
@@ -55,7 +55,7 @@ const Services = () => {
           </div>
 
           <AnimatePresence>
-            <motion.div className="grid xs:grid-cols-2 sm:grid-cols-3 mt-12 gap-3 ">
+            <motion.div className="grid xs:grid-cols-2 sm:grid-cols-3 mt-8 gap-3 ">
               {filterImage &&
                 filterImage.slice(0, showAllImages ? filterImage.length : 6).map((filterImg) => {
                   return (
@@ -65,13 +65,13 @@ const Services = () => {
                     animate={{opacity :1}}
                     exist={{opacity :0,transition:{duration:3}}}
                     key={filterImage.id}
-                     className="mt-10   ">
-                      <ul>
+                    >
+                      <ul >
                         <li
                           key={filterImg.id}
                           className="relative inline-block "
                         >
-                          <div className=" absolute flex items-center justify-center  p-5 z-30 flex-col  whitespace-normal bg-blue-main text-center  text-yellow-main opacity-0 transition duration-500 hover:opacity-90 rounded-md">
+                          <div className=" absolute flex items-center justify-center  p-5 z-20 flex-col  whitespace-normal bg-blue-main text-center  text-yellow-main opacity-0 transition duration-500 hover:opacity-90 rounded-md">
                             <p className="sm:p-9 sm:mt-7">
                               {filterImg.description}
                             </p>
