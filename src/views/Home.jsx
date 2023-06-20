@@ -6,9 +6,11 @@ import { heroData } from "../data";
 const Home = () => {
   const {title,paragraph,btnText} = heroData
   return (
-    <motion.div id="home" className="gap-16 py-20 xs:h-full xs:pb-0  ">
-      <div className="sm:flex mx-auto w-5/6 items-center justify-center sm:h-5/6">
-        <div className="mt-8 sm:basis-4/5 sm:mt-12">
+    <div>
+    <div div id="home" className="pt-36 ">
+      <div className="sm:flex mx-auto w-5/6  items-center justify-center ">
+        <div className=" sm:basis-4/5 ">
+      
           {/* heading and paragraph */}
          
             <motion.div
@@ -77,7 +79,8 @@ const Home = () => {
           <img src={hero} alt="Airwings_image" />
         </motion.div>
       </div>
-    </motion.div>
+    </div>
+    </div>
   );
 };
 
