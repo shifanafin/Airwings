@@ -93,7 +93,7 @@ const Services = () => {
                 className="bg-blue-main rounded-md w-28 h-9 text-yellow-main"
                 onClick={handleSeeMore}
               >
-                View More
+                show More
               </button>
             </div>
           )}
@@ -104,7 +104,7 @@ const Services = () => {
                 className="bg-blue-main rounded-md w-28 h-9 text-yellow-main"
                 onClick={() => setShowAllImages(false)}
               >
-                View Less
+                show Less
               </button>
             </div>
           )}
