@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Servicebtns, ServiceData } from "../data";
 
 const Services = () => {
+ 
   const [filterImage, setFilterImage] = useState(null);
   const [activeButton, setActiveButton] = useState("all");
   const [showAllImages, setShowAllImages] = useState(false);
@@ -23,23 +24,24 @@ const Services = () => {
   const handleSeeMore = () => {
     setShowAllImages(true);
   };
+  const styling = "w-12 h-1 rounded-sm bg-yellow-main";
  
 
   return (
-    <div  className="sm:h-full sm:w-full">
+    <div id="service" className="sm:w-full ">
    
-      <div id="service" className="pt-28 xs:pt-32">
+      <div  className="pt-32">
         <div className="mx-auto w-5/6 ">
           <div>
             <h1 className="text-4xl font-bold text-blue-main   ">
               OUR SERVICES
             </h1>
-            <div className="w-12 h-1 rounded-sm bg-yellow-main"></div>
           </div>
           <div className="flex flex-wrap justify-start gap-6 text-lg font-bold   cursor-pointer pt-4">
             {Servicebtns.map((item, id) => {
               const isActive = activeButton === item.value;
-              const buttonClassName = isActive ? "underline" : "hover:underline"
+          const buttonClassName = isActive ?   "underline text-yellow-500"  
+              : "hover:underline"
               return (
                 <button
                 
@@ -57,18 +59,19 @@ const Services = () => {
           <AnimatePresence>
             <motion.div className="grid xs:grid-cols-2 sm:grid-cols-3 mt-8 gap-3 ">
               {filterImage &&
-                filterImage.slice(0, showAllImages ? filterImage.length : 6).map((filterImg) => {
+                filterImage.slice(0, showAllImages ? filterImage.length : 6).map((filterImg,id) => {
                   return (
                     <motion.div
+                    key={id}
                     layout
                     initial={{opacity :0}}
                     animate={{opacity :1}}
                     exist={{opacity :0,transition:{duration:3}}}
-                    key={filterImage.id}
+                   
                     >
-                      <ul >
+                      <ul  >
                         <li
-                          key={filterImg.id}
+                   
                           className="relative inline-block "
                         >
                           <div className=" absolute flex items-center justify-center  p-5 z-20 flex-col  whitespace-normal bg-blue-main text-center  text-yellow-main opacity-0 transition duration-500 hover:opacity-90 rounded-md">

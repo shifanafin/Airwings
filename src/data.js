@@ -102,3 +102,50 @@ export const ServiceData = [
     value: "fourth",
   },
 ];
+
+
+export const PackagesData ={
+  title:'SPECIAL PACKAGES',
+
+  Item:[
+    {
+      id:1,
+  rate:5600,
+      peoples:4,
+      class:"first",
+      title:"kjfbgkdjg",
+  times :3,
+  time:24/7,
+  help:"via Phone"
+    },
+    {
+      id:2,
+  rate:5600,
+      peoples:4,
+      class:"first",
+      title:"kjfbgkdjg",
+  times :3,
+  time:24/7,
+  help:"via Phone"
+    },
+    {
+      id:3,
+  rate:5600,
+      peoples:4,
+      class:"first",
+      title:"kjfbgkdjg",
+  times :3,
+  time:24/7,
+  help:"via Phone"
+    },
+ 
+ 
+  ]
+
+
+}
+
+
+export const ContactData = {
+  title:"Contact US"
+}

@@ -2,12 +2,14 @@ import React from "react";
 import hero from "../assets/hero.jpg";
 import { motion } from "framer-motion";
 import { heroData } from "../data";
+import { Link } from "react-scroll";
+
 
 const Home = () => {
   const {title,paragraph,btnText} = heroData
   return (
-    <div>
-    <div div id="home" className="pt-36 ">
+    <div id="home">
+    <div   className="pt-36 ">
       <div className="sm:flex mx-auto w-5/6  items-center justify-center ">
         <div className=" sm:basis-4/5 ">
       
@@ -59,9 +61,13 @@ const Home = () => {
             }}
             className="mt-6 flex items-center justify-start"
           >
+               <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} 
+          >
             <button className="rounded-md bg-yellow-main px-10 py-2 text-white font-medium">
               {btnText}
             </button>
+          </Link>
+          
           </motion.div>
         </div>
 

@@ -5,6 +5,7 @@ import Services from "./views/Services"
 import Packages from "./views/Packages"
 import Contact from "./views/Contact"
 import { Bars2Icon, Bars3Icon } from "@heroicons/react/24/solid"
+import Footer from "./views/Footer"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
            <Services/>
            <Packages/>
            <Contact/>
+           <Footer/>
           
     </div>
     

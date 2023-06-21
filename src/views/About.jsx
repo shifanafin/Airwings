@@ -6,7 +6,10 @@ import { aboutData } from "../data";
 const About = () => {
   const { heading, description, lists } = aboutData;
   return (
-    <div id="about" className="sm:w-full sm:h-full">
+    <div id="about" className="">
+      &nbsp;
+      &nbsp;
+      &nbsp;
       &nbsp;
       <div className="pt-32 ">
         <div className="mx-auto w-5/6 ">
